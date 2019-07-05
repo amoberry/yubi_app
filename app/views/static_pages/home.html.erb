@@ -1,0 +1,59 @@
+<% provide(:title, "ホーム") %>
+<%= yield %>
+<section class="home">
+  <p class="site-title-sub">アイデアを現実にしよう</p>
+  <h1 class="site-title">YUBY</h1>
+    <!--<button type="button" id="registration">テスト</button>-->
+  <div class="btn">
+    <a href="#" class="btn-animation-02", id="registration"><span>はじめる<span></a>
+    <!--<div class="btn-animation-02", id="registration"><span>はじめる<span></div>-->
+  </div>
+</section>
+<section class="about">
+  <h2 class="heading">ABOUT</h2>
+  <p class="about-txt">
+    自分がやってみたいことがある人、やりたいことが見つからない人がマッチングできるようなアプリケーションです。<br>自分の仲間になってほしい人、協力したい人とメッセージでやり取りをして楽しい毎日にしましょう。
+  </p>
+
+  <div id="overlay"></div>
+  <div id="modalWindow">
+    <h1>新規登録</h1>
+    <%= form_with model: @user, url: { controller: "users", action: "create" } do |form| %>
+    <div><%= form.label :name %>
+    <%= form.text_field :name %></div>
+    <br>
+    <div><%= form.label :email %>
+    <%= form.text_field :email %></div>
+    <br>
+    <div><%= form.label :password %>
+    <%= form.text_field :password %></div>
+    <br>
+    <%= form.submit %>
+    <% end %>
+    <br>
+    <button id="close">Close</button>
+  </div>
+<% @record.each{|r| %>
+<%= r[:name] %>
+<% } %>
+<%= @error %>
+
+    <div class="icons">
+      <div class="icon-box">
+        <i class="image-icon fas fa-bullhorn"></i>
+        <div class="box-title">collect</div>
+          <p class="box-txt">自分のやりたいことを<br>投稿して仲間を集めよう！</p>
+        </div>
+        <div class="icon-box">
+          <i class="image-icon fas fa-users"></i>
+          <div class="box-title">join</div>
+          <p class="box-txt">みんなの投稿から<br>好きなことを見つけて参加しよう！</p>
+        </div>
+        <div class="icon-box">
+          <i class="image-icon far fa-comment-dots"></i>
+          <div class="box-title">chat</div>
+          <p class="box-txt">共感したユーザーと<br>アイデアを実現しよう！</p>
+       </div>
+    </div>
+</section>
+<%= yield %>

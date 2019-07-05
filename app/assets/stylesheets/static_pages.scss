@@ -1,0 +1,218 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.header {
+  width: 100%;
+  display: flex;
+}
+
+.nav {
+  display: flex;
+  width: 50%;
+}
+
+.navbar-right{
+  flex-direction: row-reverse;
+}
+.navbar-left {
+  margin-left: 20px;
+  font-size: 30px;
+}
+.nav-item{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+a.app-logo {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #4169e1;
+	border: 2px solid #4169e1;
+	border-radius: 3px;
+	transition: .4s;
+}
+a.app-logo:hover {
+	background: #4169e1;
+	color: #fff;
+}
+
+.nav-item {
+	display: block;
+	width: 160px;
+	padding: 0.8em;
+	text-align: center;
+	text-decoration: none;
+	color: #4169e1;
+	border: 2px solid #4169e1;
+	border-radius: 3px;
+	transition: .4s;
+}
+.nav-item:hover {
+	background: #4169e1;
+	color: #fff;
+}
+
+.home{
+  padding: 150px 30px 80px;
+  background-color: #ff6347;
+}
+
+.site-title-sub{
+  margin: 0 0 30px;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.site-title-sub::before,
+.site-title-sub::after{
+  content: "";
+  display: inline-block;
+  width: 140px;
+  height: 2px;
+  margin: 0 30px;
+  background-color: #fff;
+  vertical-align: middle;
+}
+
+.site-title{
+  margin: 40px 0 40px;
+  font-size: 7.6rem;
+}
+
+.btn-animation-02 {
+  display: inline-block;
+  width: 200px;
+  text-align: center;
+  background-color: #9ec34b;
+  border: 2px solid #9ec34b;
+  font-size: 16px;
+  color: #9ec34b;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 24px;
+  border-radius: 4px;
+  position: relative;
+}
+
+.btn-animation-02 span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-animation-02::before,
+.btn-animation-02::after {
+  content: "";
+  display: block;
+  background-color: #FFF;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: .2s;
+}
+.btn-animation-02::before {
+  left: 0;
+}
+.btn-animation-02::after {
+  right: 0;
+}
+
+.btn-animation-02:hover:before,
+.btn-animation-02:hover:after {
+  width: 0;
+  background-color: #FFF;
+}
+
+.btn-animation-02:hover {
+  color: #FFF;
+}
+
+.about {
+  padding: 80px 30px;
+  background-color: #FFF;
+  color: #333;
+}
+
+h2 {
+  color: #364e96;/*文字色*/
+    padding: 0.5em 0;/*上下の余白*/
+    border-top: solid 3px #364e96;/*上線*/
+    border-bottom: solid 3px #364e96;/*下線*/
+  }
+
+.heading {
+  margin: 30px 0 15px;
+  letter-spacing: 2px;
+  font-size: 25px;
+}
+
+.about-txt {
+  margin: 30px 0;
+  line-height: 2.5;
+}
+
+.icons {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+
+.icon-box {
+  display: table-cell;
+}
+
+.image-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  padding-top: 35px;
+}
+
+.sns {
+  text-align: center;
+}
+
+.Copyright {
+  text-align: center;
+}
+
+.footer {
+  padding: 60px 0 30px 0;
+}
+
+#overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1
+ }
+
+ #modalWindow {
+   padding: 120px;
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  border: 2px solid #D04255;
+  background-color: #FFF;
+  display: none;
+  z-index: 2
+}
